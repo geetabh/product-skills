@@ -255,13 +255,27 @@ Before delivering any research output, verify:
 
 ## Output Delivery
 
-### Default: Markdown Document
-For most research requests, produce a structured markdown document following the relevant mode's output format. This should be saved as a `.md` file the user can reference later.
+### Always ask the user which format they want
 
-### For Quick Questions
-If the user asks a narrow, specific question (e.g., "what's the CAGR for edtech in India?"), answer directly with sources — don't produce a full report.
+Before producing a research deliverable, ask the user what output format they want. Do not assume, and do not default to a file. The same research is consumed very differently depending on whether it is meant to be read, shared, presented, or version-controlled.
 
-### For Complex Research
+| Format | Best for |
+|--------|----------|
+| **Artifact** (rendered web page) | Reading and sharing a link. Strong choice for briefs and assessments meant to be read by a person. |
+| **Markdown file** | Version control, diffing, feeding into other tools, updating over time. |
+| **Word or PDF** | Circulating to leadership, a board, or external parties. |
+| **Slide deck** | Presenting findings live. |
+| **Chat only** | Quick reads where no file is wanted. |
+
+Ask early — before doing the writing, not after it. If the user has already stated a preference anywhere in the conversation, honour it and don't ask again.
+
+### Exception: quick questions
+If the user asks a narrow, specific question (e.g., "what's the CAGR for edtech in India?"), answer directly with sources. Don't ask about format and don't produce a full report.
+
+### Where to save files
+Never write research output into the skill's own directory. A skill definition is reusable instructions; a research report is a dated one-off artifact of running them. Mixing the two means the skill package silently accumulates unrelated reports, and anyone installing the skill drags them along. Ask the user where the file should go, or default to a location clearly separate from the skill.
+
+### For complex research
 If the research requires more than one mode, produce a single comprehensive document that flows logically rather than separate reports. Use the Opportunity Assessment (Mode 5) format as the wrapper.
 
 ## References
